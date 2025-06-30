@@ -68,6 +68,42 @@ header {
 
 /* header acima */
 
+
+main {
+    background-color: var(--cor-terciaria);
+    flex-wrap: wrap;
+    flex: 1 2 300px;
+}
+
+main h2 {
+    font-family: "Lobster Two", sans-serif;
+    color: var(--cor-secundaria) !important;
+    background-color: #4253777e;
+    padding: 4px;
+    width: 700px;
+    border-radius: 5px;
+    text-align: center;
+    justify-self: center;
+}
+
+#politicasPriv {
+    padding: 30px;
+    gap: 20px;
+}
+
+#politicasPriv dt{
+    color: var(--cor-titulo);
+}
+
+#politicasPriv dd{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#politicasPriv a{
+    color: var(--cor-secundaria);
+}
+
 footer {
     background-image: url(/assets/ori-header-background_resized.png);
     border-top: 30px solid var(--cor-titulo);
@@ -141,7 +177,7 @@ footer {
     color: var(--cor-terciaria);
 }
 
-.infoFooter a:hover{
+.infoFooter a:hover {
     color: var(--cor-detalhes);
 }
 
@@ -155,4 +191,5 @@ footer {
     justify-content: space-between;
     padding: 0px 20px 0px 20px;
 }
- /* footer acima */
+
+/* footer acima */

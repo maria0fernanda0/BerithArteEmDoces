@@ -67,6 +67,43 @@ header {
 }
 /* header acima */
 
+main {
+    background-color: var(--cor-terciaria);
+    flex-wrap: wrap;
+    flex: 1 2 300px;
+}
+
+main h2 {
+    font-family: "Lobster Two", sans-serif;
+    color: var(--cor-secundaria) !important;
+    background-color: #4253777e;
+    padding: 4px;
+    width: 700px;
+    border-radius: 5px;
+    text-align: center;
+    justify-self: center;
+}
+
+#termos{
+    padding: 30px;
+    gap: 20px;
+}
+
+#termos dt{
+    color: var(--cor-titulo);
+}
+
+#termos dd{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#termos a{
+    color: var(--cor-secundaria);
+}
+
+/* footer abaixo */
+
 footer {
     background-image: url(/assets/ori-header-background_resized.png);
     border-top: 30px solid var(--cor-titulo);
