@@ -1,0 +1,178 @@
+@charset "UTF-08";
+
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+:root {
+    --cor-principal: #596992;
+    --cor-secundaria: #425377;
+    --cor-terciaria: #f8e5b9;
+    --cor-detalhes: #aebadf;
+    --cor-titulo: #303c55;
+    --borda-radius: 12px;
+}
+
+
+#produtos {
+  width: 100%;
+  max-width: 1600px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  background-color: var(--cor-terciaria);
+}
+
+#boloContainer,
+#kitsContainer,
+#docesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+/* ---- CARDS ---- */
+
+
+.card {
+  background-color: whitesmoke;
+  border-radius: var(--borda-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 20px;
+  width: 30%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: var(--borda-radius);
+  border-top-right-radius: var(--borda-radius);
+}
+
+.card .info {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  align-content: center;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: var(--cor-titulo);
+  text-align: center;
+}
+
+.card p {
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}
+
+/* ---- BOTÃO ---- */
+
+.card button {
+  background-color: var(--cor-principal);
+  color: var(--cor-terciaria);
+  border: none;
+  padding: 5px;
+  border-radius: 15px;
+  height: 45px;
+  width: 250px;
+  cursor: pointer;
+  justify-content: center !important;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+  background-color: var(--cor-titulo);
+  transform: scale(1.05);
+}
+
+/* ---- Títulos das Seções ---- */
+
+
+.cardBolos h2,
+.cardKits h2,
+.cardDoces h2 {
+   font-family: "Lobster Two", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  color: var(--cor-titulo);
+}
+
+/* responsividade */
+
+@media (max-width: 1024px) {
+    .cardBolo,
+    .cardKits,
+    .cardDoces {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardBolo,
+    .cardKits,
+    .cardDoces {
+        width: 80%;
+    }
+
+    #boloContainer,
+    #kitsContainer,
+    #docesContainer {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cardBolo,
+    .cardKits,
+    .cardDoces {
+        width: 100%;
+    }
+
+    .cardBolo,
+    .cardKits,
+    .cardDoces {
+        padding: 15px;
+    }
+
+    .cardBolo button,
+    .cardKits button,
+    .cardDoces button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .bolosInfo h3,
+    .kitsInfo h3,
+    .docesInfo h3 {
+        font-size: 18px;
+    }
+
+    .bolosInfo p,
+    .kitsInfo p,
+    .docesInfo p {
+        font-size: 14px;
+    }
+}
